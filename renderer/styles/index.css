@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html, body {
+    @apply h-full m-0 overflow-hidden bg-transparent font-sans text-white antialiased;
+  }
+}
+
+.popup-enter {
+  opacity: 0;
+  transform: scale(0.96) translateY(-6px);
+}
+.popup-enter-active {
+  opacity: 1;
+  transform: scale(1) translateY(0);
+  transition:
+    opacity 120ms ease-out,
+    transform 120ms ease-out;
+}
+.popup-exit-active {
+  opacity: 0;
+  transform: scale(0.96) translateY(-6px);
+  transition:
+    opacity 100ms ease-in,
+    transform 100ms ease-in;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.2);
+}

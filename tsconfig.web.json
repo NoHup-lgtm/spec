@@ -1,0 +1,12 @@
+{
+  "extends": "@electron-toolkit/tsconfig/tsconfig.web.json",
+  "compilerOptions": {
+    "outDir": "dist/renderer",
+    "baseUrl": ".",
+    "paths": {
+      "@renderer/*": ["renderer/*"],
+      "@shared/*": ["shared/*"]
+    }
+  },
+  "include": ["renderer/**/*", "shared/**/*"]
+}
